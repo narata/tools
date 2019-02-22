@@ -1,4 +1,4 @@
-package com.narata.tools.orc.utils;
+package com.narata.tools.orc;
 
 import org.apache.hadoop.conf.Configuration;
 import org.apache.hadoop.fs.Path;
