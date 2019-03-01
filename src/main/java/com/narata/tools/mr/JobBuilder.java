@@ -27,7 +27,7 @@ public class JobBuilder {
 			printUsage(tool);
 			return null;
 		}
-		Job job = new Job(conf);
+		Job job = Job.getInstance(conf);
 		job.setJarByClass(tool.getClass());
 		for (int i = 0; i < args.length-1; i++) {
 			FileInputFormat.addInputPath(job, new Path(args[i]));

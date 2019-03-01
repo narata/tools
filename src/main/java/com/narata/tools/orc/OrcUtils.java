@@ -39,7 +39,7 @@ public class OrcUtils {
 			for (int r = 0; r < batch.size; r++) {
 				OrcStruct result = new OrcStruct(schema);
 				for(int i=0; i < numberOfChildren; ++i) {
-					result.setFieldValue(i, OrcMapredRecordReader.nextValue(batch.cols[i], 1,
+					result.setFieldValue(i, OrcMapredRecordReader.nextValue(batch.cols[i], r,
 							children.get(i), result.getFieldValue(i)));
 				}
 				resultList.add(result);
